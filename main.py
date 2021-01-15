@@ -1,6 +1,6 @@
-# Object Detection
+## Object Detection (SSD)
 
-# Importing the libraries
+# importing the libraries
 import torch
 from torch.autograd import Variable
 import cv2
@@ -9,7 +9,7 @@ from ssd import build_ssd
 import imageio
 
 
-# Defining a function that will do the detections
+# defining a detecting function
 def detect(frame, net, transform):
     height, width = frame.shape[:2]
     frame_t = transform(frame)[0]
@@ -28,15 +28,15 @@ def detect(frame, net, transform):
             j += 1
     return frame
 
-# Creating the SSD neural network
+# initialising the SSD neural network
 net = build_ssd('test')
 net.load_state_dict(torch.load('ssd300_mAP_77.43_v2.pth', map_location = lambda storage, loc: storage))
 
-# Creating the transformation
+# creating the transformation
 transform = BaseTransform(net.size, (104/256.0, 117/256.0, 123/256.0))
 
-# Doing some Object Detection on a video
-reader = imageio.get_reader('street.mp4')
+# reading, detect, write operations:
+reader = imageio.get_reader('sample1.mp4')
 fps = reader.get_meta_data()['fps']
 writer = imageio.get_writer('output_temp_1.mp4', fps = fps)
 for i, frame in enumerate(reader):
