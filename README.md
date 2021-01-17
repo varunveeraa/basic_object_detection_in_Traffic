@@ -22,3 +22,12 @@ Thus, we got (c+4)kmn outputs.
 <img src="img2.png">
 To have more accurate detection, different layers of feature maps are also going through a small 3×3 convolution for object detection as shown above.
 
+### Major steps involved
+1. Importing the libraries
+2. Defining a detecting function
+3. Initialising the SSD neural network
+4. Creating the transformation
+5. Read, Detect, Write operations
+
+### Result
+<img src="result.png">
