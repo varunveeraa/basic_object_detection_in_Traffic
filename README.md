@@ -9,7 +9,6 @@ SSD (Single Shot Detector) is reviewed. By using SSD, we only need to take one s
 
 ### 1.MultiBox Detector
 <img src="images/img1.png">
-SSD: Multiple Bounding Boxes for Localization (loc) and Confidence (conf)
 
 ->After going through a certain of convolutions for feature extraction, we obtain a feature layer of size m×n (number of locations) with p channels, such as 8×8 or 4×4 above. And a 3×3 conv is applied on this m×n×p feature layer.
 ->For each location, we got k bounding boxes. These k bounding boxes have different sizes and aspect ratios. The concept is, maybe a vertical rectangle is more fit for human, and a horizontal rectangle is more fit for car.
