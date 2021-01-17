@@ -30,4 +30,4 @@ To have more accurate detection, different layers of feature maps are also going
 5. Read, Detect, Write operations
 
 ### Result
-<img src="images/result.png">
+<img src="images/result.png" width=400 height=200>
